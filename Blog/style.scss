@@ -1,10 +1,35 @@
 body {
     border: 2px dashed red;
     margin: 100px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI';
 }
 
+h1 {
 
+     font-size:2.5rem;
+}
+
+.date{
+    border:2px dashed red;
+    color: #888888;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0;
+}
+
+main{
+
+    display: flex;
+    gap: 15px;
+    .picture{
+        border:2px dashed red;
+        flex: 2;
+        background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
+        border-radius: 8px;
+    }
+    border:2px dashed blue;
+    flex: 1;
+}
 
 
 
