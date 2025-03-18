@@ -1,0 +1,8 @@
+.flex-wrapper{
+    border: 3px solid red;
+    display: flex;
+}
+
+.item{
+    border: 3px solid blue;
+}
