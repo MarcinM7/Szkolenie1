@@ -1,8 +1,23 @@
-.flex-wrapper{
-    border: 3px solid red;
-    display: flex;
+body{
+    background-color: #646161;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+ h1{
+    color: #fff;
+    text-align: center;
+ }
 
-.item{
-    border: 3px solid blue;
-}
+ ol{
+    list-style-type: none;
+
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    a:hover{
+        color: #000;
+    }
+
+ }
