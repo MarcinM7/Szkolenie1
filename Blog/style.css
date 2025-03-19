@@ -14,20 +14,21 @@ body .date {
   margin: 0;
 }
 
-body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 15px;
-}
-
-body main .picture {
+body .picture {
   border: 2px dashed red;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
   border-radius: 8px;
+  min-height: 150px;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
 }
 
 body main header {
@@ -44,5 +45,56 @@ body main header h2 {
 body main header .desc {
   border: 2px dashed orange;
   margin: 0;
+}
+
+body section {
+  border: 2px dashed purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+body section article {
+  border: 2px dashed yellow;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+body section article .date {
+  border: 2px dashed pink;
+  margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .picture {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 30px;
+  }
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body section article {
+    width: unset;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -16,18 +16,19 @@ h1 {
     font-weight: 700;
     margin: 0;
 }
+.picture{
+    border:2px dashed red;
+    flex: 2;
+    background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
+    border-radius: 8px;
+    min-height: 150px;
+}
 
 main{
 
     display: flex;
     gap: 15px;
 
-            .picture{
-                border:2px dashed red;
-                flex: 2;
-                background: linear-gradient(45deg, #FA9696 0%, #FD5BA8 49%, #FF75F1 100%);
-                border-radius: 8px;
-            }
             header{
                 border:2px dashed blue;
                 flex: 1;
@@ -41,7 +42,48 @@ main{
                     margin: 0;
                 }
             }
-    }
+        }
+        section{
+            border: 2px dashed purple;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
 
+            article{
+                border: 2px dashed yellow;
+                width: 30%;
+                margin-bottom: 20px;
+
+                .date{
+                    border: 2px dashed pink;
+                    margin-top: 30px;
+                }
+            }
+        
+        }
 }
+@media(min-width: 1200px){
+    body{
+        main{
+            flex-direction: column;
+        }
+        .picture{
+            min-height: 350px;
+        }
+    }
+}
+@media(max-width: 768px){
+    body{
+        margin: 30px;
+        main{
+            flex-direction: column;
+        }
+        section article{
+            width: unset;
+        }
+    }
+}
+
+
 
