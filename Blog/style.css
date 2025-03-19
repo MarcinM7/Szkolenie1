@@ -36,4 +36,13 @@ body main header {
       -ms-flex: 1;
           flex: 1;
 }
+
+body main header h2 {
+  border: 2px dashed green;
+}
+
+body main header .desc {
+  border: 2px dashed orange;
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */
