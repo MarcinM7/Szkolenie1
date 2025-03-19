@@ -7,7 +7,7 @@ body h1 {
   font-size: 2.5rem;
 }
 
-.date {
+body .date {
   border: 2px dashed red;
   color: #888888;
   letter-spacing: 1px;
@@ -15,7 +15,7 @@ body h1 {
   margin: 0;
 }
 
-main {
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +26,7 @@ main {
           flex: 1;
 }
 
-main .picture {
+body main .picture {
   border: 2px dashed red;
   -webkit-box-flex: 2;
       -ms-flex: 2;
