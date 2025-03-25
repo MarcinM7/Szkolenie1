@@ -23,6 +23,7 @@ body{
   .carousel-item{
     position:absolute;
     height:100%;
+    opacity:0;
   }
   
   img{
