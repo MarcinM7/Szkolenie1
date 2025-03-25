@@ -1,0 +1,58 @@
+body{
+    border: 1px solid red;
+}
+
+.weather-container{
+    height: 100vh;
+    display: flex;
+}
+
+.weather-container-item{
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+.img{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: 30%;
+    height: 40%;
+}
+
+.date{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: 30%;
+    height: 40%;
+
+}
+
+.stopnie{
+    display: flex;
+    align-self: flex-end;
+    border: 1px solid red;
+    width: 30%;
+    height: 40%;
+}
+.weather-tygodniowa-container{
+    display: flex;
+    height: 40%;
+    width: 40%;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.weather-tygodniowa{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid rgb(0, 255, 85);
+    
+}
