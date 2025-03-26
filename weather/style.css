@@ -1,58 +1,40 @@
-body{
-    border: 1px solid red;
-}
-
-.weather-container{
-    height: 100vh;
-    display: flex;
-}
-
-.weather-container-item{
-    display: flex;
-    justify-content: space-between;
-    height: 40%;
-    width: 80%;
-    padding: 20px;
-    border: 1px solid blue;
-}
-
-.img{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid red;
-    width: 30%;
-    height: 40%;
-}
-
-.date{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid red;
-    width: 30%;
-    height: 40%;
-
-}
-
-.stopnie{
-    display: flex;
-    align-self: flex-end;
-    border: 1px solid red;
-    width: 30%;
-    height: 40%;
-}
-.weather-tygodniowa-container{
-    display: flex;
-    height: 40%;
-    width: 40%;
-    justify-content: space-between;
-    align-self: flex-end;
-}
-
-.weather-tygodniowa{
-    display: flex;
-    height: 40%;
-    width: 100%;
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    min-height: 100vh;
+    margin:0;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  
+  h1{
+    margin:0;
+  }
+  
+  main{
+    flex:1;
+    display:flex;
     justify-content: center;
-    border: 1px solid rgb(0, 255, 85);
-    
-}
+  }
+  
+  .weather-item{
+    border:2px solid blue;
+    display:flex;
+    gap:10px;
+    justify-content: center;
+  }
+  
+  .weather-image{
+    width: 75px;
+  }
+  
+  .forecast-wrapper{
+    display: flex;
+    border:1px solid #000;
+    overflow-x: auto;
+    gap:10px;
+  }
