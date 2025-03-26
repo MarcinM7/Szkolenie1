@@ -1,4 +1,4 @@
-const base_url = 'https://api.weaterapi.com/v1'
+const base_url = 'https://api.weatherapi.com/v1'
 
 const key = '56fa909c22c34441901180038252503'
 
