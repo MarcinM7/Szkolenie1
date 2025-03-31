@@ -1,40 +1,74 @@
 *{
-    box-sizing: border-box;
-  }
-  
-  body{
-    min-height: 100vh;
-    margin:0;
-    padding:20px;
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-  }
-  
-  h1{
-    margin:0;
-  }
-  
-  main{
-    flex:1;
-    display:flex;
-    justify-content: center;
-  }
-  
-  .weather-item{
-    border:2px solid blue;
-    display:flex;
-    gap:10px;
-    justify-content: center;
-  }
-  
-  .weather-image{
-    width: 75px;
-  }
-  
-  .forecast-wrapper{
-    display: flex;
-    border:1px solid #000;
-    overflow-x: auto;
-    gap:10px;
-  }
+  box-sizing: border-box;
+}
+
+html{
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-position: 100% 100%;
+  padding:0 20px;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  margin:20px auto;
+  min-height: calc(100vh - 40px);
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(9.3px);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  max-width: 900px;
+}
+
+h1, h2, h3 {
+  margin:0;
+}
+
+main{
+  flex:1;
+  display:flex;
+  justify-content: center;
+}
+
+main .weather-item{
+  flex-direction: column;
+}
+
+main .weather-item .weather-image{
+  transform:scale(2);
+}
+
+main .weather-details{
+  font-size:1.5rem;
+  font-weight: 600;
+}
+
+.weather-item{
+  display:flex;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-details{
+  text-align: center;
+}
+
+
+.forecast-wrapper{
+  display: flex;
+  border:1px solid #000;
+  overflow-x: auto;
+  gap:10px;
+}
+
+.date{
+  white-space: nowrap;
+}
