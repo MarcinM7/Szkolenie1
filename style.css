@@ -28,7 +28,7 @@ body{
         font-weight: bold;
     }
     a:hover{
-        color: #000;
+        color: hsla(78, 61%, 52%, 0.521);
     }
 
  }
