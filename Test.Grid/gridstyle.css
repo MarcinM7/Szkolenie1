@@ -24,20 +24,3 @@ body{
     border: 1px solid #dd2e2e;
 }
 
-.item-1{
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 1;
-    border: 1px solid #e9e1e1;
-}
-
-.item-2{
-    display: grid;
-    grid-column-start: 6;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 1;
-    border: 1px solid #c58d14;
-}
