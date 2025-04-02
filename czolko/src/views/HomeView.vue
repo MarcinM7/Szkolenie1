@@ -1,96 +1,24 @@
 <script setup>
-
-  const categories = [
-    {
-      name: 'Programowanie',
-      items: [
-        'Haker',
-        'Programista',
-        'Debugger',
-        'Frontend',
-        'Backend',
-        'Framework',
-        'Baza danych',
-        'Algorytm',
-        'Kod źródłowy',
-        'Funkcja'
-      ]
-    },
-    {
-      name: 'Filmy',
-      items: [
-        'Titanic',
-        'Matrix',
-        'Avatar',
-        'Gladiator',
-        'Incepcja',
-        'Ojciec chrzestny',
-        'Forrest Gump',
-        'Gwiezdne Wojny',
-        'Shrek',
-        'Joker'
-      ]
-    },
-    {
-      name: 'Zwierzęta',
-      items: [
-        'Słoń',
-        'Tygrys',
-        'Żyrafa',
-        'Orzeł',
-        'Rekin',
-        'Krokodyl',
-        'Pingwin',
-        'Jeż',
-        'Nietoperz',
-        'Koala'
-      ]
-    },
-    {
-      name: 'Sport',
-      items: [
-        'Piłka nożna',
-        'Koszykówka',
-        'Tenis',
-        'Boks',
-        'Siatkówka',
-        'Żużel',
-        'Formuła 1',
-        'Lekkoatletyka',
-        'Hokej',
-        'Golf'
-      ]
-    },
-    {
-      name: 'Jedzenie',
-      items: [
-        'Pizza',
-        'Hamburger',
-        'Sushi',
-        'Spaghetti',
-        'Lody',
-        'Czekolada',
-        'Jajecznica',
-        'Tiramisu',
-        'Bigos',
-        'Kebab'
-      ]
-    }
-  ]
-
+import { useCategory } from '../composables/useCategory'
+const categories = useCategory()
 </script>
 
 <template>
   <div class="home-view">
     <h1>CZÓŁKO</h1>
     <div class="categories">
+
       <div class="category" v-for="category of categories">
-        {{ category.name }}
+
+        <router-link :to="'/game/' + category.name">
+          {{ category.name }}
+        </router-link>
+
       </div>
+
     </div>
   </div>
 </template>
-
 
 <style lang="scss">
 .home-view{
