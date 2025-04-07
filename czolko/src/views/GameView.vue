@@ -31,6 +31,7 @@
     import { useRouter } from 'vue-router'
     import { useCategory } from '../composables/useCategory'
     import { ref } from 'vue'
+    import { usePlayers } from '../store/usePlayers'
   
     const router = useRouter()
     const category = router.currentRoute.value.params.category
@@ -39,6 +40,7 @@
     const items = categories[category_index].items
   
     const item = ref(null)
+    const players_store = usePlayers()
     let item_index = 0
   
     const showNextItem = () => {
