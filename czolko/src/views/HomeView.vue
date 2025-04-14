@@ -30,13 +30,20 @@ const categories = useCategory()
     padding:25px;
 
     .category{
-      padding: 3rem 1rem;
       font-weight:800;
       font-size: clamp(.75rem, 2.5vw, 1.5rem);
       cursor:pointer;
       background: #ff5733;
       border-radius: 15px;
       box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.51);
+
+      a {
+        display:flex;
+        padding: 3rem 1rem;
+        justify-content: center;
+        text-decoration: none;
+        color: #323131de;
+      }
 
       &:active{
         box-shadow: unset;        

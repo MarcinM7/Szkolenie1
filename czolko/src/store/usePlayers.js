@@ -1,31 +1,32 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
-export const usePlayers = defineStore('players', () =>{
+export const usePlayers = defineStore('players', () => {
 
-const players = ref([])
+  const current_category = ref(null)
+  const player_index = ref(0)
+  const list = ref([])
+  
+  const addPlayer = (category) => {
 
-const addPlayer = (category) => {
-    players.value.push({
-        results: [
+    if(category != current_category.value){
+      list.value = []
+      current_category.value = category
+    }
 
-            {
-                category,
-                good: 0,
-                bad: 0,
+    player_index.value = list.value.push(0) - 1
+    return player_index.value
 
-            }
-        ]
-    })
+  }
 
-}
+  const countAnswer = (result) => {
+    list.value[player_index.value] = list.value[player_index.value] + result
+  }
 
-
-return {
-
-    players,
+  return {
+    list,
     addPlayer,
-}
-
+    countAnswer,
+  }
 
 })
