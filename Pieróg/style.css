@@ -1,0 +1,255 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+}
+
+@-webkit-keyframes sliding {
+  from {
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
+  }
+  to {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+  }
+}
+
+@keyframes sliding {
+  from {
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
+  }
+  to {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes cant-hit {
+  0% {
+    opacity: .8;
+  }
+  25% {
+    opacity: .2;
+  }
+  50% {
+    opacity: .8;
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+
+@keyframes cant-hit {
+  0% {
+    opacity: .8;
+  }
+  25% {
+    opacity: .2;
+  }
+  50% {
+    opacity: .8;
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+
+.in-game {
+  cursor: none;
+}
+
+.gameplane {
+  min-height: 100vh;
+  min-height: 100svh;
+  background-size: auto 100%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.gameplane .space {
+  --animation-speed: 5s;
+  background-image: url("./images/background-pattern.jpg");
+  background-size: auto 100%;
+  inset: 0;
+}
+
+.gameplane .space.bg1 {
+  -webkit-animation: sliding var(--animation-speed) linear infinite;
+          animation: sliding var(--animation-speed) linear infinite;
+}
+
+.gameplane .space.bg2 {
+  -webkit-animation: sliding var(--animation-speed) linear infinite;
+          animation: sliding var(--animation-speed) linear infinite;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.gameplane > div {
+  position: absolute;
+}
+
+.gameplane > div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gameplane .pierog {
+  --pierog-width: 30%;
+  width: var(--pierog-width);
+  top: 50%;
+  left: calc(50% - (var(--pierog-width) / 2));
+}
+
+.gameplane .pierog.cant-hit {
+  -webkit-animation: cant-hit 2s infinite;
+          animation: cant-hit 2s infinite;
+}
+
+.gameplane .meteor, .gameplane .mushroom {
+  --meteor-width:15%;
+  width: var(--meteor-width);
+  aspect-ratio: 1/1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+}
+
+.gameplane .meteor {
+  background-image: url("./images/meteor.webp");
+}
+
+.gameplane .mushroom {
+  background-image: url("./images/mushroom.webp");
+}
+
+.gameplane .lives {
+  bottom: 0;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gameplane .lives .live {
+  width: 33%;
+  aspect-ratio: 1/1;
+  background: url("./images/live.webp");
+  background-size: contain;
+}
+
+.gameplane .modal-wrapper {
+  inset: 0;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.gameplane .modal-wrapper .modal {
+  border-radius: 8px;
+  background: #ffffff22;
+  padding: 40px 60px;
+  max-width: 50%;
+}
+
+.gameplane .modal-wrapper .modal .modal-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.gameplane .modal-wrapper .modal .modal-inner h1 {
+  margin: 0;
+}
+
+.gameplane .modal-wrapper .modal .modal-inner button {
+  width: 100%;
+  padding: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.gameplane .score-wrapper {
+  bottom: 0;
+  right: 0;
+  width: 33%;
+  aspect-ratio: 3/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.gameplane .score-wrapper .score-icon {
+  width: 33%;
+  aspect-ratio: 1/1;
+  background: url("/Pieróg/images/mushroom.webp");
+  background-size: contain;
+}
+
+.gameplane .score-wrapper .score {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
